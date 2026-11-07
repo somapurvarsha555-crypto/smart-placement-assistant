@@ -1,0 +1,1 @@
+"import mysql.connector`nimport os`n`ndef get_db_connection():`n    return mysql.connector.connect(`n        host='localhost',`n        user='root',`n        password='Varsha@sql#',`n        database='placement_assistant'`n    )"

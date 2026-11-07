@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Mentor Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+      <div class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">🚀 PlacementPro</div>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-indigo-400 transition">Home</a>
+        <a href="questions.html" class="text-slate-300 hover:text-indigo-400 transition">Questions</a>
+        <a href="progress.html" class="text-slate-300 hover:text-indigo-400 transition">My Progress</a>
+        <a href="chatbot.html" class="text-indigo-400">AI Mentor Bot</a>
+      </div>
+    </nav>
+
+    
+
+    <div class="max-w-3xl w-full mx-auto px-6 py-10 flex-1 flex flex-col">
+        <h2 class="text-3xl font-bold mb-2">Placement Mentor Bot</h2>
+        <p class="text-slate-400 mb-6">Ask technical questions regarding Python, FastAPI, MySQL, or Interviews.</p>
+
+        <div id="chat-box" class="flex-1 bg-slate-900/50 border border-slate-800 rounded-2xl p-6 overflow-y-auto space-y-4 mb-6 h-96 backdrop-blur-xl">
+            <div class="flex items-start space-x-3">
+                <div class="bg-indigo-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold text-xs shrink-0">BOT</div>
+                <div class="bg-slate-800 text-slate-200 p-4 rounded-2xl max-w-lg text-sm">
+                    Hello! I'm your placement prep bot. Ask me anything about Python, FastAPI, MySQL, or type 'help'!
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-3">
+            <input type="text" id="chat-input" placeholder="Type a message (e.g. 'What is FastAPI?')..." class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 text-slate-100">
+            <button onclick="sendChatMessage()" class="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-xl font-semibold text-sm shadow-lg shadow-indigo-600/30 transition">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

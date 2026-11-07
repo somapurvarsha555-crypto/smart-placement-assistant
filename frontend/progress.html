@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Progress</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+      <div class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">🚀 PlacementPro</div>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-indigo-400 transition">Home</a>
+        <a href="questions.html" class="text-slate-300 hover:text-indigo-400 transition">Questions</a>
+        <a href="progress.html" class="text-indigo-400">My Progress</a>
+        <a href="chatbot.html" class="text-slate-300 hover:text-indigo-400 transition">AI Mentor Bot</a>
+      </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 py-10">
+        <h2 class="text-3xl font-bold mb-2">Performance Dashboard</h2>
+        <p class="text-slate-400 mb-8">Review your past attempts and completion metrics.</p>
+
+        <div id="stats-cards" class="grid grid-cols-2 gap-6 mb-8">
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-400 text-sm">Total Attempted</p>
+                <h3 id="stat-attempts" class="text-3xl font-extrabold mt-2 text-indigo-400">0</h3>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl">
+                <p class="text-slate-400 text-sm">Completed Questions</p>
+                <h3 id="stat-solved" class="text-3xl font-extrabold mt-2 text-emerald-400">0</h3>
+            </div>
+        </div>
+
+        <div class="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-900/80 border-b border-slate-800 text-slate-400 text-xs uppercase tracking-wider">
+                        <th class="p-4">Question Title</th>
+                        <th class="p-4">Category</th>
+                        <th class="p-4">Score</th>
+                        <th class="p-4">Status</th>
+                        <th class="p-4">Date</th>
+                    </tr>
+                </thead>
+                <tbody id="progress-table-body" class="divide-y divide-slate-800/60 text-sm">
+                    <tr><td colspan="5" class="p-4 text-slate-500 animate-pulse">Loading progress records...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        loadStudentProgress(1); // Demo student ID = 1
+    </script>
+</body>
+</html>

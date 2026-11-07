@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solve Question - PlacementPro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
+    <!-- Navbar -->
+    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+      <div class="flex items-center space-x-2">
+        <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">🚀 PlacementPro</span>
+      </div>
+      <div class="space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-300 hover:text-indigo-400 transition">Home</a>
+        <a href="questions.html" class="text-indigo-400">Questions</a>
+        <a href="progress.html" class="text-slate-300 hover:text-indigo-400 transition">My Progress</a>
+        <a href="chatbot.html" class="text-slate-300 hover:text-indigo-400 transition">AI Mentor Bot</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-6 py-10" id="question-detail-container">
+        <div class="flex gap-2 mb-4">
+            <span id="q-category" class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Loading...</span>
+            <span id="q-difficulty" class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Loading...</span>
+        </div>
+        <h1 id="q-title" class="text-3xl font-extrabold text-white mb-4">Loading Question...</h1>
+        <p id="q-description" class="text-slate-300 bg-slate-900/60 border border-slate-800 p-6 rounded-2xl mb-8 leading-relaxed">Please wait while we fetch the problem details...</p>
+
+        <!-- Solution Submission Form -->
+        <form onsubmit="submitAttempt(event)" class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl">
+            <input type="hidden" id="question-id">
+            <label class="block text-sm font-semibold text-slate-300 mb-2">Your Python Code Solution:</label>
+            <textarea id="submitted-answer" rows="6" required placeholder="Write your code or answer here..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-100 focus:outline-none focus:border-indigo-500 font-mono text-sm mb-4"></textarea>
+            <button type="submit" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition">Submit Solution</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
